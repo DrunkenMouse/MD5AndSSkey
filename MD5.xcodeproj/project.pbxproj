@@ -15,6 +15,11 @@
 		1635A2F01CC103020072290C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1635A2EE1CC103020072290C /* LaunchScreen.storyboard */; };
 		1635A2FB1CC103030072290C /* MD5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A2FA1CC103030072290C /* MD5Tests.m */; };
 		1635A3061CC103030072290C /* MD5UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A3051CC103030072290C /* MD5UITests.m */; };
+		1635A3161CC103EC0072290C /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A3151CC103EC0072290C /* NSString+Hash.m */; };
+		1635A31A1CC1064E0072290C /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A3191CC1064E0072290C /* NSArray+Log.m */; };
+		1635A3221CC1069B0072290C /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1635A31C1CC1069B0072290C /* SSKeychain.strings */; };
+		1635A3231CC1069B0072290C /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A31F1CC1069B0072290C /* SSKeychain.m */; };
+		1635A3241CC1069B0072290C /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A3211CC1069B0072290C /* SSKeychainQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,15 @@
 		1635A3011CC103030072290C /* MD5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MD5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1635A3051CC103030072290C /* MD5UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MD5UITests.m; sourceTree = "<group>"; };
 		1635A3071CC103030072290C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1635A3141CC103EC0072290C /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		1635A3151CC103EC0072290C /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		1635A3181CC1064E0072290C /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		1635A3191CC1064E0072290C /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		1635A31D1CC1069B0072290C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SSKeychain.strings; sourceTree = "<group>"; };
+		1635A31E1CC1069B0072290C /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		1635A31F1CC1069B0072290C /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		1635A3201CC1069B0072290C /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		1635A3211CC1069B0072290C /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,9 @@
 		1635A2DF1CC103020072290C /* MD5 */ = {
 			isa = PBXGroup;
 			children = (
+				1635A31B1CC1069B0072290C /* SSKeychain */,
+				1635A3171CC1064E0072290C /* Log */,
+				1635A3131CC103EC0072290C /* Security */,
 				1635A2E31CC103020072290C /* AppDelegate.h */,
 				1635A2E41CC103020072290C /* AppDelegate.m */,
 				1635A2E61CC103020072290C /* ViewController.h */,
@@ -138,6 +155,36 @@
 				1635A3071CC103030072290C /* Info.plist */,
 			);
 			path = MD5UITests;
+			sourceTree = "<group>";
+		};
+		1635A3131CC103EC0072290C /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				1635A3141CC103EC0072290C /* NSString+Hash.h */,
+				1635A3151CC103EC0072290C /* NSString+Hash.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		1635A3171CC1064E0072290C /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				1635A3181CC1064E0072290C /* NSArray+Log.h */,
+				1635A3191CC1064E0072290C /* NSArray+Log.m */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		1635A31B1CC1069B0072290C /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				1635A31C1CC1069B0072290C /* SSKeychain.strings */,
+				1635A31E1CC1069B0072290C /* SSKeychain.h */,
+				1635A31F1CC1069B0072290C /* SSKeychain.m */,
+				1635A3201CC1069B0072290C /* SSKeychainQuery.h */,
+				1635A3211CC1069B0072290C /* SSKeychainQuery.m */,
+			);
+			path = SSKeychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1635A3221CC1069B0072290C /* SSKeychain.strings in Resources */,
 				1635A2F01CC103020072290C /* LaunchScreen.storyboard in Resources */,
 				1635A2ED1CC103020072290C /* Assets.xcassets in Resources */,
 				1635A2EB1CC103020072290C /* Main.storyboard in Resources */,
@@ -270,9 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1635A31A1CC1064E0072290C /* NSArray+Log.m in Sources */,
 				1635A2E81CC103020072290C /* ViewController.m in Sources */,
+				1635A3161CC103EC0072290C /* NSString+Hash.m in Sources */,
+				1635A3241CC1069B0072290C /* SSKeychainQuery.m in Sources */,
 				1635A2E51CC103020072290C /* AppDelegate.m in Sources */,
 				1635A2E21CC103020072290C /* main.m in Sources */,
+				1635A3231CC1069B0072290C /* SSKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +374,14 @@
 				1635A2EF1CC103020072290C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1635A31C1CC1069B0072290C /* SSKeychain.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1635A31D1CC1069B0072290C /* en */,
+			);
+			name = SSKeychain.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
